@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:16:28 by htrindad          #+#    #+#             */
-/*   Updated: 2025/10/15 16:37:46 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/10/15 16:41:59 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ class Cat: virtual public Animal
 		~Cat();
 		Cat(const Cat &ref);
 		Cat &operator=(const Cat &ref);
-		void makeSound();
+		void makeSound() const;
 };

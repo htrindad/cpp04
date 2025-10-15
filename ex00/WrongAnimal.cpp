@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 16:11:27 by htrindad          #+#    #+#             */
-/*   Updated: 2025/10/15 16:38:36 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/10/15 16:42:25 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &ref)
 
 // Methods
 
-void WrongAnimal::makeSound() { std::cout << "unknown wrong noise\n"; }
+void WrongAnimal::makeSound() const { std::cout << "unknown wrong noise\n"; }
 
 std::string WrongAnimal::getType() const { return type; }

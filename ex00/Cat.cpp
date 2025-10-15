@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:24:36 by htrindad          #+#    #+#             */
-/*   Updated: 2025/10/15 16:37:53 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/10/15 16:42:04 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,4 @@ Cat &Cat::operator=(const Cat &ref)
 
 // Methods
 
-void Cat::makeSound() { std::cout << "MEOW!\n"; }
+void Cat::makeSound() const { std::cout << "MEOW!\n"; }

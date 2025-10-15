@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:19:54 by htrindad          #+#    #+#             */
-/*   Updated: 2025/10/15 16:37:41 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/10/15 16:41:45 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ Animal &Animal::operator=(const Animal &ref)
 
 // Methods
 
-void Animal::makeSound() { std::cout << "unknown animal makes a sound\n"; }
+void Animal::makeSound() const { std::cout << "unknown animal makes a sound\n"; }
 
 std::string Animal::getType() const { return type; }

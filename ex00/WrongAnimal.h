@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 16:09:29 by htrindad          #+#    #+#             */
-/*   Updated: 2025/10/15 16:38:24 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/10/15 16:42:21 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ class WrongAnimal
 		~WrongAnimal();
 		WrongAnimal(const WrongAnimal &ref);
 		WrongAnimal &operator=(const WrongAnimal &ref);
-		void makeSound();
+		void makeSound() const;
 		std::string getType() const;
 };
