@@ -1,5 +1,5 @@
 NAME = main
-SRC = Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongDog.cpp WrongCat.cpp main.cpp
+SRC = Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongDog.cpp WrongCat.cpp Brain.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 CXXFLAGS = -Wall -Wextra -Werror -O3 -std=c++98
 

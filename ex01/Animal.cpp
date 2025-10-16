@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:19:54 by htrindad          #+#    #+#             */
-/*   Updated: 2025/10/15 16:41:45 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/10/16 18:26:19 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Animal::Animal()
 	type = "Default animal";
 	std::cout << "Standard animal created\n";
 }
-Animal::~Animal() { std::cout << "Animal deletedn\n"; }
+Animal::~Animal() { std::cout << "Animal deleted\n"; }
 Animal::Animal(const Animal &ref)
 {
 	type = ref.type;

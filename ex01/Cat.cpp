@@ -6,19 +6,23 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:24:36 by htrindad          #+#    #+#             */
-/*   Updated: 2025/10/15 16:42:04 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/10/16 18:08:27 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.h"
 
 // CDO
-Cat::Cat()
+Cat::Cat() : Animal(), brain(new Brain())
 {
 	type = "Cat";
 	std::cout << "Cat created\n";
 }
-Cat::~Cat() { std::cout << "Cat destroyed\n"; }
+Cat::~Cat()
+{
+	delete brain;
+	std::cout << "Cat destroyed\n";
+}
 Cat::Cat(const Cat &ref)
 {
 	type = ref.type;
@@ -27,6 +31,9 @@ Cat::Cat(const Cat &ref)
 Cat &Cat::operator=(const Cat &ref)
 {
 	type = ref.type;
+	if (brain)
+		delete brain;
+	brain = new Brain(*ref.brain);
 	std::cout << "Cat copied\n";
 	return *this;
 }
@@ -34,3 +41,5 @@ Cat &Cat::operator=(const Cat &ref)
 // Methods
 
 void Cat::makeSound() const { std::cout << "MEOW!\n"; }
+
+Brain *Cat::getBrain() const { return brain; }
