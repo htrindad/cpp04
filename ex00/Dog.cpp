@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:49:19 by htrindad          #+#    #+#             */
-/*   Updated: 2025/10/15 16:42:13 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/10/17 14:45:06 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,4 @@ Dog &Dog::operator=(const Dog &ref)
 
 // Methods
 
-void Dog::makeSound() const { std::cout << "WOOOF!"; }
+void Dog::makeSound() const { std::cout << "WOOOF!\n"; }
