@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.h                                           :+:      :+:    :+:   */
+/*   WrongDog.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 15:14:08 by htrindad          #+#    #+#             */
-/*   Updated: 2025/10/17 13:28:16 by htrindad         ###   ########.fr       */
+/*   Created: 2025/10/15 16:24:54 by htrindad          #+#    #+#             */
+/*   Updated: 2025/10/15 16:27:35 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <iostream>
+#include "WrongDog.h"
 
-class Animal
+// CDO
+WrongDog::WrongDog()
 {
-	protected:
-		std::string type;
-	public:
-		Animal();
-		virtual ~Animal();
-		Animal(const Animal &ref);
-		Animal &operator=(const Animal &ref);
-		virtual void makeSound() const;
-		std::string getType() const;
-};
+	type = "WrongDog";
+	std::cout << "WrongDog created\n";
+}
+WrongDog::~WrongDog() { std::cout << "WrongDog incinerated\n"; }
+WrongDog::WrongDog(const WrongDog &ref)
+{
+	type = ref.type;
+	std::cout << "WrongDog cloned\n";
+}
+WrongDog &WrongDog::operator=(const WrongDog &ref)
+{
+	type = ref.type;
+	std::cout << "WrongDog copied\n";
+	return *this;
+}

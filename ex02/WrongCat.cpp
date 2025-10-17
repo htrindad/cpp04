@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.h                                           :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 15:14:08 by htrindad          #+#    #+#             */
-/*   Updated: 2025/10/17 13:28:16 by htrindad         ###   ########.fr       */
+/*   Created: 2025/10/15 16:17:23 by htrindad          #+#    #+#             */
+/*   Updated: 2025/10/15 16:32:42 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <iostream>
+#include "WrongCat.h"
 
-class Animal
+// CDO
+WrongCat::WrongCat()
 {
-	protected:
-		std::string type;
-	public:
-		Animal();
-		virtual ~Animal();
-		Animal(const Animal &ref);
-		Animal &operator=(const Animal &ref);
-		virtual void makeSound() const;
-		std::string getType() const;
-};
+	type = "WrongCat";
+	std::cout << "A WrongCat has immerged.\n";
+}
+WrongCat::~WrongCat() { std::cout << "A WrongCat has disappeared"; }
+WrongCat::WrongCat(const WrongCat &ref)
+{
+	type = ref.type;
+	std::cout << "WrongCat cloned\n";
+}
+WrongCat &WrongCat::operator=(const WrongCat &ref)
+{
+	type = ref.type;
+	std::cout << "WrongCat copied\n";
+	return *this;
+}

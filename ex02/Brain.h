@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.h                                           :+:      :+:    :+:   */
+/*   Brain.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 15:14:08 by htrindad          #+#    #+#             */
-/*   Updated: 2025/10/17 13:28:16 by htrindad         ###   ########.fr       */
+/*   Created: 2025/10/16 17:06:43 by htrindad          #+#    #+#             */
+/*   Updated: 2025/10/16 17:59:18 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
+#include <stdint.h>
 
-class Animal
+class Brain
 {
 	protected:
-		std::string type;
+		std::string ideas[100];
 	public:
-		Animal();
-		virtual ~Animal();
-		Animal(const Animal &ref);
-		Animal &operator=(const Animal &ref);
-		virtual void makeSound() const;
-		std::string getType() const;
+		Brain();
+		~Brain();
+		Brain(const Brain &ref);
+		Brain &operator=(const Brain &ref);
+		std::string getIdea(const int index) const;
+		void setIdea(const int index, const std::string &idea);
 };
